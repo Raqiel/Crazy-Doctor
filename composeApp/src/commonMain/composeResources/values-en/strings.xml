@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Crazy Shift</string>
+    <string name="home_subtitle">Every patient shows up with a weirder problem than the last. Pick the right tool and heal everyone before their health runs out!</string>
+    <string name="play">Start the shift</string>
+    <string name="choose_patient">Waiting room</string>
+    <string name="back">Back</string>
+    <string name="locked">Locked</string>
+    <string name="load_failed">Could not load the patients.</string>
+    <string name="try_again">Try again</string>
+    <string name="leave">Leave</string>
+    <string name="health">Health</string>
+    <string name="healed_count">%1$d/%2$d healed</string>
+    <string name="briefing_hint">Tap or drag the right tool on each injury. The wrong tool hurts!</string>
+    <string name="begin">Start treatment</string>
+    <string name="won_title">Patient healed!</string>
+    <string name="lost_title">Oops, not this time…</string>
+    <string name="lost_body">Health reached zero. Want to try again?</string>
+    <string name="next_patient">Next patient</string>
+    <string name="other_patient">Pick another patient</string>
+    <string name="tool_tweezers">Tweezers</string>
+    <string name="tool_needle">Needle</string>
+    <string name="tool_sponge">Sponge</string>
+    <string name="tool_spray">Spray</string>
+    <string name="tool_bandage">Bandage</string>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Plantão Maluco</string>
+    <string name="home_subtitle">Cada paciente chega com um problema mais estranho que o outro. Escolha a ferramenta certa e cure todo mundo antes que a saúde acabe!</string>
+    <string name="play">Abrir o plantão</string>
+    <string name="choose_patient">Sala de espera</string>
+    <string name="back">Voltar</string>
+    <string name="locked">Bloqueado</string>
+    <string name="load_failed">Não deu pra carregar os pacientes.</string>
+    <string name="try_again">Tentar de novo</string>
+    <string name="leave">Sair</string>
+    <string name="health">Saúde</string>
+    <string name="healed_count">%1$d/%2$d curados</string>
+    <string name="briefing_hint">Toque ou arraste com a ferramenta certa em cada machucado. Ferramenta errada dói!</string>
+    <string name="begin">Começar atendimento</string>
+    <string name="won_title">Paciente curado!</string>
+    <string name="lost_title">Ih, não deu…</string>
+    <string name="lost_body">A saúde chegou a zero. Bora tentar de novo?</string>
+    <string name="next_patient">Próximo paciente</string>
+    <string name="other_patient">Escolher outro paciente</string>
+    <string name="tool_tweezers">Pinça</string>
+    <string name="tool_needle">Agulha</string>
+    <string name="tool_sponge">Esponja</string>
+    <string name="tool_spray">Spray</string>
+    <string name="tool_bandage">Curativo</string>
+</resources>

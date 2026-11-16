@@ -1,0 +1,295 @@
+[
+  {
+    "id": 1,
+    "name": "Seu Zé Tropeço",
+    "story": "Tentou descer a ladeira de skate de olhos fechados. A ladeira ganhou.",
+    "image": null,
+    "look": { "skin": "#FFD3B4", "hair": "#E0A030", "hairStyle": "SPIKY", "gown": "#FFB74D", "accessory": "NONE" },
+    "maxHealth": 100,
+    "drainPerSecond": 1.5,
+    "wrongToolDamage": 8,
+    "problems": [
+      { "type": "CUT", "x": 0.5, "y": 0.2 },
+      { "type": "DIRT", "x": 0.35, "y": 0.65 },
+      { "type": "DIRT", "x": 0.66, "y": 0.82 },
+      { "type": "BRUISE", "x": 0.13, "y": 0.75 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dona Cotinha",
+    "story": "Foi abraçar o cacto premiado da vizinha. O cacto não gostou nada.",
+    "image": null,
+    "look": { "skin": "#F1C27D", "hair": "#D0D0D0", "hairStyle": "BUN", "gown": "#F48FB1", "accessory": "GLASSES" },
+    "maxHealth": 100,
+    "drainPerSecond": 2.0,
+    "wrongToolDamage": 10,
+    "problems": [
+      { "type": "SPLINTER", "x": 0.36, "y": 0.2 },
+      { "type": "SPLINTER", "x": 0.64, "y": 0.24 },
+      { "type": "SPLINTER", "x": 0.3, "y": 0.62 },
+      { "type": "SPLINTER", "x": 0.7, "y": 0.66 },
+      { "type": "SPLINTER", "x": 0.5, "y": 0.85 },
+      { "type": "DIRT", "x": 0.87, "y": 0.86 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Biel Lambão",
+    "story": "Comeu um sorvete que caiu no chão da feira. Três vezes seguidas.",
+    "image": null,
+    "look": { "skin": "#8D5524", "hair": "#2B1B10", "hairStyle": "SHORT", "gown": "#AED581", "accessory": "NONE" },
+    "maxHealth": 100,
+    "drainPerSecond": 2.4,
+    "wrongToolDamage": 10,
+    "problems": [
+      { "type": "GERM", "x": 0.5, "y": 0.2 },
+      { "type": "GERM", "x": 0.3, "y": 0.6 },
+      { "type": "GERM", "x": 0.7, "y": 0.62 },
+      { "type": "GERM", "x": 0.5, "y": 0.82 },
+      { "type": "DIRT", "x": 0.35, "y": 0.38 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Capitã Fumaça",
+    "story": "Subiu no poste pra salvar um gato e caiu junto com ele. O gato está ótimo.",
+    "image": null,
+    "look": { "skin": "#C68642", "hair": "#1B1B1B", "hairStyle": "LONG", "gown": "#90CAF9", "accessory": "HELMET" },
+    "maxHealth": 100,
+    "drainPerSecond": 2.8,
+    "wrongToolDamage": 12,
+    "problems": [
+      { "type": "CUT", "x": 0.42, "y": 0.2 },
+      { "type": "BRUISE", "x": 0.66, "y": 0.38 },
+      { "type": "CUT", "x": 0.4, "y": 0.7 },
+      { "type": "SPLINTER", "x": 0.65, "y": 0.62 },
+      { "type": "DIRT", "x": 0.13, "y": 0.65 },
+      { "type": "BRUISE", "x": 0.87, "y": 0.8 },
+      { "type": "GERM", "x": 0.58, "y": 0.9 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Professor Pirueta",
+    "story": "Tentou um salto quádruplo no circo usando patins. Ninguém sabe por quê.",
+    "image": null,
+    "look": { "skin": "#FFE0BD", "hair": "#6D4C41", "hairStyle": "BALD", "gown": "#CE93D8", "accessory": "MUSTACHE" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.4,
+    "wrongToolDamage": 14,
+    "problems": [
+      { "type": "SPLINTER", "x": 0.34, "y": 0.2 },
+      { "type": "CUT", "x": 0.62, "y": 0.2 },
+      { "type": "GERM", "x": 0.66, "y": 0.4 },
+      { "type": "DIRT", "x": 0.3, "y": 0.58 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.58 },
+      { "type": "CUT", "x": 0.5, "y": 0.75 },
+      { "type": "SPLINTER", "x": 0.13, "y": 0.85 },
+      { "type": "GERM", "x": 0.87, "y": 0.76 },
+      { "type": "DIRT", "x": 0.33, "y": 0.92 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.92 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tia Glória Faísca",
+    "story": "Tentou consertar a tomada com um garfo. A tomada ganhou.",
+    "image": null,
+    "look": { "skin": "#E8B98A", "hair": "#B23A48", "hairStyle": "LONG", "gown": "#FFF176", "accessory": "GLASSES" },
+    "maxHealth": 100,
+    "drainPerSecond": 2.6,
+    "wrongToolDamage": 10,
+    "problems": [
+      { "type": "DIRT", "x": 0.34, "y": 0.2 },
+      { "type": "BRUISE", "x": 0.66, "y": 0.4 },
+      { "type": "CUT", "x": 0.3, "y": 0.58 },
+      { "type": "DIRT", "x": 0.5, "y": 0.75 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.92 },
+      { "type": "GERM", "x": 0.13, "y": 0.85 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Juca Mergulho",
+    "story": "Pulou de ponta na piscina do clube. Ela estava vazia pra limpeza.",
+    "image": null,
+    "look": { "skin": "#A0663B", "hair": "#111111", "hairStyle": "SPIKY", "gown": "#80DEEA", "accessory": "NONE" },
+    "maxHealth": 100,
+    "drainPerSecond": 2.8,
+    "wrongToolDamage": 11,
+    "problems": [
+      { "type": "BRUISE", "x": 0.34, "y": 0.2 },
+      { "type": "CUT", "x": 0.35, "y": 0.38 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.58 },
+      { "type": "SPLINTER", "x": 0.5, "y": 0.75 },
+      { "type": "DIRT", "x": 0.33, "y": 0.92 },
+      { "type": "BRUISE", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Dona Pituca",
+    "story": "Correu atrás do ônibus de chinelo. O chinelo correu pro outro lado.",
+    "image": null,
+    "look": { "skin": "#FFDBAC", "hair": "#9E9E9E", "hairStyle": "SHORT", "gown": "#FFAB91", "accessory": "GLASSES" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.0,
+    "wrongToolDamage": 11,
+    "problems": [
+      { "type": "DIRT", "x": 0.62, "y": 0.2 },
+      { "type": "CUT", "x": 0.3, "y": 0.58 },
+      { "type": "SPLINTER", "x": 0.7, "y": 0.58 },
+      { "type": "CUT", "x": 0.5, "y": 0.75 },
+      { "type": "BRUISE", "x": 0.33, "y": 0.92 },
+      { "type": "DIRT", "x": 0.13, "y": 0.85 },
+      { "type": "GERM", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Rafa Rolimã",
+    "story": "Desceu o morro num carrinho de rolimã sem freio. E sem rodas no fim.",
+    "image": null,
+    "look": { "skin": "#7B4A2A", "hair": "#E65100", "hairStyle": "SHORT", "gown": "#B39DDB", "accessory": "NONE" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.1,
+    "wrongToolDamage": 12,
+    "problems": [
+      { "type": "SPLINTER", "x": 0.34, "y": 0.2 },
+      { "type": "SPLINTER", "x": 0.62, "y": 0.2 },
+      { "type": "DIRT", "x": 0.3, "y": 0.58 },
+      { "type": "DIRT", "x": 0.7, "y": 0.58 },
+      { "type": "CUT", "x": 0.5, "y": 0.75 },
+      { "type": "SPLINTER", "x": 0.13, "y": 0.85 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.92 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sargento Bigodão",
+    "story": "Tentou ensinar um ganso a marchar. O ganso não quis aprender.",
+    "image": null,
+    "look": { "skin": "#F3C9A0", "hair": "#4E342E", "hairStyle": "BALD", "gown": "#A5D6A7", "accessory": "MUSTACHE" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.2,
+    "wrongToolDamage": 12,
+    "problems": [
+      { "type": "CUT", "x": 0.34, "y": 0.2 },
+      { "type": "GERM", "x": 0.66, "y": 0.4 },
+      { "type": "BRUISE", "x": 0.35, "y": 0.38 },
+      { "type": "SPLINTER", "x": 0.3, "y": 0.58 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.58 },
+      { "type": "CUT", "x": 0.5, "y": 0.75 },
+      { "type": "DIRT", "x": 0.33, "y": 0.92 },
+      { "type": "GERM", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Lelê Cambalhota",
+    "story": "Deu cambalhota na cama elástica da festa e pousou bem no bolo.",
+    "image": null,
+    "look": { "skin": "#C68642", "hair": "#F06292", "hairStyle": "BUN", "gown": "#FFE082", "accessory": "NONE" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.3,
+    "wrongToolDamage": 13,
+    "problems": [
+      { "type": "DIRT", "x": 0.34, "y": 0.2 },
+      { "type": "DIRT", "x": 0.62, "y": 0.2 },
+      { "type": "GERM", "x": 0.35, "y": 0.38 },
+      { "type": "GERM", "x": 0.66, "y": 0.4 },
+      { "type": "DIRT", "x": 0.5, "y": 0.75 },
+      { "type": "SPLINTER", "x": 0.33, "y": 0.92 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.92 },
+      { "type": "GERM", "x": 0.13, "y": 0.85 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Doutor Trambolho",
+    "story": "Médico do plantão do lado. Tropeçou no próprio estetoscópio.",
+    "image": null,
+    "look": { "skin": "#FFE0BD", "hair": "#212121", "hairStyle": "SHORT", "gown": "#ECEFF1", "accessory": "GLASSES" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.5,
+    "wrongToolDamage": 13,
+    "problems": [
+      { "type": "CUT", "x": 0.34, "y": 0.2 },
+      { "type": "BRUISE", "x": 0.62, "y": 0.2 },
+      { "type": "SPLINTER", "x": 0.35, "y": 0.38 },
+      { "type": "DIRT", "x": 0.3, "y": 0.58 },
+      { "type": "CUT", "x": 0.7, "y": 0.58 },
+      { "type": "GERM", "x": 0.5, "y": 0.75 },
+      { "type": "BRUISE", "x": 0.33, "y": 0.92 },
+      { "type": "DIRT", "x": 0.13, "y": 0.85 },
+      { "type": "SPLINTER", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Vovó Turbina",
+    "story": "Foi a primeira da fila no show de rock. E a primeira na roda punk.",
+    "image": null,
+    "look": { "skin": "#E0AC69", "hair": "#FAFAFA", "hairStyle": "BUN", "gown": "#EF9A9A", "accessory": "GLASSES" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.6,
+    "wrongToolDamage": 14,
+    "problems": [
+      { "type": "BRUISE", "x": 0.34, "y": 0.2 },
+      { "type": "CUT", "x": 0.66, "y": 0.4 },
+      { "type": "BRUISE", "x": 0.3, "y": 0.58 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.58 },
+      { "type": "CUT", "x": 0.5, "y": 0.75 },
+      { "type": "SPLINTER", "x": 0.33, "y": 0.92 },
+      { "type": "SPLINTER", "x": 0.7, "y": 0.92 },
+      { "type": "GERM", "x": 0.13, "y": 0.85 },
+      { "type": "DIRT", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Bombeiro Faro",
+    "story": "Seguiu o cheiro de fumaça até o quintal do vizinho. Era churrasco mesmo.",
+    "image": null,
+    "look": { "skin": "#8D5524", "hair": "#3E2723", "hairStyle": "SHORT", "gown": "#FFCC80", "accessory": "HELMET" },
+    "maxHealth": 100,
+    "drainPerSecond": 3.8,
+    "wrongToolDamage": 14,
+    "problems": [
+      { "type": "DIRT", "x": 0.34, "y": 0.2 },
+      { "type": "CUT", "x": 0.35, "y": 0.38 },
+      { "type": "DIRT", "x": 0.66, "y": 0.4 },
+      { "type": "SPLINTER", "x": 0.3, "y": 0.58 },
+      { "type": "BRUISE", "x": 0.7, "y": 0.58 },
+      { "type": "GERM", "x": 0.5, "y": 0.75 },
+      { "type": "CUT", "x": 0.33, "y": 0.92 },
+      { "type": "DIRT", "x": 0.7, "y": 0.92 },
+      { "type": "BRUISE", "x": 0.13, "y": 0.85 },
+      { "type": "GERM", "x": 0.87, "y": 0.76 }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Mestre Cabrioleta",
+    "story": "Dono do circo. Quis provar pra plateia que o canhão humano era seguro.",
+    "image": null,
+    "look": { "skin": "#F1C27D", "hair": "#000000", "hairStyle": "SPIKY", "gown": "#FF8A65", "accessory": "MUSTACHE" },
+    "maxHealth": 100,
+    "drainPerSecond": 4.0,
+    "wrongToolDamage": 15,
+    "problems": [
+      { "type": "SPLINTER", "x": 0.34, "y": 0.2 },
+      { "type": "CUT", "x": 0.62, "y": 0.2 },
+      { "type": "DIRT", "x": 0.35, "y": 0.38 },
+      { "type": "GERM", "x": 0.66, "y": 0.4 },
+      { "type": "BRUISE", "x": 0.3, "y": 0.58 },
+      { "type": "CUT", "x": 0.7, "y": 0.58 },
+      { "type": "GERM", "x": 0.5, "y": 0.75 },
+      { "type": "DIRT", "x": 0.33, "y": 0.92 },
+      { "type": "SPLINTER", "x": 0.7, "y": 0.92 },
+      { "type": "BRUISE", "x": 0.13, "y": 0.85 },
+      { "type": "GERM", "x": 0.87, "y": 0.76 }
+    ]
+  }
+]
