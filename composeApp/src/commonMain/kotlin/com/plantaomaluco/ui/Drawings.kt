@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import com.plantaomaluco.domain.Accessory
@@ -276,8 +277,23 @@ private fun DrawScope.drawBruise(center: Offset, unit: Float, problem: Problem) 
     }
 }
 
-fun DrawScope.drawToolIcon(tool: Tool) {
-    val w = size.width
+fun DrawScope.drawToolInHand(tool: Tool, position: Offset, scale: Float) {
+    val iconSize = size.width * 0.18f
+    val anchor = Offset(iconSize * 0.2f, iconSize * 1.05f)
+    val middle = Offset(iconSize / 2f, iconSize / 2f)
+    drawCircle(tool.accent.copy(alpha = 0.35f * scale), radius = size.width * 0.03f, center = position)
+    withTransform({
+        translate(position.x - anchor.x, position.y - anchor.y)
+        scale(scale, scale, pivot = anchor)
+    }) {
+        drawCircle(Color.White.copy(alpha = 0.9f), radius = iconSize * 0.62f, center = middle)
+        drawCircle(tool.accent, radius = iconSize * 0.62f, center = middle, style = Stroke(width = iconSize * 0.06f))
+        drawToolIcon(tool, iconSize)
+    }
+}
+
+fun DrawScope.drawToolIcon(tool: Tool, iconSize: Float) {
+    val w = iconSize
     when (tool) {
         Tool.TWEEZERS -> {
             drawLine(Steel, Offset(w * 0.3f, w * 0.15f), Offset(w * 0.46f, w * 0.85f), strokeWidth = w * 0.09f, cap = StrokeCap.Round)
@@ -299,7 +315,7 @@ fun DrawScope.drawToolIcon(tool: Tool) {
             drawCircle(SprayBlue.copy(alpha = 0.6f), radius = w * 0.04f, center = Offset(w * 0.72f, w * 0.18f))
             drawCircle(SprayBlue.copy(alpha = 0.4f), radius = w * 0.035f, center = Offset(w * 0.84f, w * 0.27f))
         }
-        Tool.BANDAGE -> rotate(degrees = -30f) {
+        Tool.BANDAGE -> rotate(degrees = -30f, pivot = Offset(w / 2f, w / 2f)) {
             drawRoundRect(BandageBeige, topLeft = Offset(w * 0.08f, w * 0.36f), size = Size(w * 0.84f, w * 0.28f), cornerRadius = CornerRadius(w * 0.12f))
             drawRoundRect(BandagePad, topLeft = Offset(w * 0.38f, w * 0.39f), size = Size(w * 0.24f, w * 0.22f), cornerRadius = CornerRadius(w * 0.05f))
         }

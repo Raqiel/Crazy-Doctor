@@ -1,5 +1,9 @@
 package com.plantaomaluco.ui
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -33,6 +37,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
@@ -41,7 +46,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -67,10 +71,12 @@ import com.plantaomaluco.resources.other_patient
 import com.plantaomaluco.resources.try_again
 import com.plantaomaluco.resources.won_title
 import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 
 private const val MAX_TICK_MILLIS = 100L
 private const val NANOS_PER_MILLI = 1_000_000L
+private const val TOOL_HIDE_MILLIS = 220
 
 @Composable
 fun TreatmentScreen(game: GameState, hasNextPatient: Boolean, onIntent: (ClinicIntent) -> Unit) {
@@ -182,7 +188,8 @@ private fun PatientBoard(
     val currentOnPress by rememberUpdatedState(onPress)
     val currentOnDrag by rememberUpdatedState(onDrag)
     var pointer by remember { mutableStateOf<Offset?>(null) }
-    val toolColor = game.selectedTool.accent
+    val toolScale = remember { Animatable(0f) }
+    val scope = rememberCoroutineScope()
 
     Canvas(
         modifier
@@ -194,6 +201,9 @@ private fun PatientBoard(
                     val width = size.width.toFloat()
                     val height = size.height.toFloat()
                     pointer = down.position
+                    scope.launch {
+                        toolScale.animateTo(1f, spring(dampingRatio = Spring.DampingRatioMediumBouncy))
+                    }
                     currentOnPress(down.position.x / width, down.position.y / height)
                     var last = down.position
                     while (true) {
@@ -205,17 +215,17 @@ private fun PatientBoard(
                         pointer = change.position
                         change.consume()
                     }
-                    pointer = null
+                    scope.launch {
+                        toolScale.animateTo(0f, tween(TOOL_HIDE_MILLIS))
+                    }
                 }
             },
     ) {
         if (portrait != null) drawPortrait(portrait) else drawCartoonPatient(game.healthRatio, game.patient.look)
         game.problems.forEach { drawProblem(it, highlighted = it.type.tool == game.selectedTool) }
-        pointer?.let { position ->
-            val radius = size.width * 0.07f
-            drawCircle(toolColor.copy(alpha = 0.3f), radius = radius, center = position)
-            drawCircle(toolColor, radius = radius, center = position, style = Stroke(width = size.width * 0.012f))
-        }
+        val position = pointer
+        val scale = toolScale.value
+        if (position != null && scale > 0f) drawToolInHand(game.selectedTool, position, scale)
     }
 }
 
@@ -242,7 +252,7 @@ private fun ToolButton(tool: Tool, selected: Boolean, onClick: () -> Unit) {
                 .border(3.dp, if (selected) tool.accent else Color.Transparent, CircleShape)
                 .padding(8.dp),
         ) {
-            drawToolIcon(tool)
+            drawToolIcon(tool, size.width)
         }
         Text(
             text = stringResource(tool.label),
