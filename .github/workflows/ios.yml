@@ -65,3 +65,32 @@ jobs:
           name: PlantaoMaluco-ios-simulator
           path: build/ios/Build/Products/Debug-iphonesimulator/iosApp.app
           if-no-files-found: error
+
+      - name: Build app for iPhone without signing
+        run: >
+          xcodebuild
+          -project iosApp/iosApp.xcodeproj
+          -scheme iosApp
+          -configuration Release
+          -sdk iphoneos
+          -destination "generic/platform=iOS"
+          -derivedDataPath build/ios
+          ARCHS=arm64
+          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_REQUIRED=NO
+          CODE_SIGN_IDENTITY=""
+          build
+
+      - name: Package unsigned IPA
+        run: |
+          mkdir -p build/ipa/Payload
+          cp -R build/ios/Build/Products/Release-iphoneos/iosApp.app build/ipa/Payload/
+          cd build/ipa
+          zip -qr PlantaoMaluco-unsigned.ipa Payload
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: PlantaoMaluco-ipa
+          path: build/ipa/PlantaoMaluco-unsigned.ipa
+          if-no-files-found: error
